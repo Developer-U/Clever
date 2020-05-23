@@ -1,0 +1,355 @@
+.header {
+  width: 100%;
+  background-color: #fff;
+}
+
+/*-----top-bar------*/
+
+.top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 1400px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 10px 0 8px 0;
+  opacity: .9;
+  color: #3ea3f2;
+}
+
+@media screen and (max-width: 1600px) {
+  .top-bar {
+    width: 83%;
+  }
+}
+
+@media screen and (max-width: 1366px) {
+  .top-bar {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .top-bar {
+    justify-content: space-between;
+  }
+}
+
+@media screen and (max-width: 740px) {
+  .top-bar {
+    flex-flow: row wrap;
+    padding: 45px 0 40px 0;
+  }
+}
+
+.header-contacts {
+  width: 36%;
+  margin: 0;
+  padding: 0;
+  font-style: normal;
+}
+
+@media screen and (max-width: 1600px) {
+  .header-contacts {
+    width: 43%;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .header-contacts {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .header-contacts {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 740px) {
+  .header-contacts {
+    width: 100%;
+  }
+}
+
+.header-contacts__phone , .header-contacts__mail {
+  display: inline-block;
+  margin-right: 6%;
+  font-size: 16px;
+  font-family: "Montserrat-Light";
+  line-height: 20px;
+  color: #3ea3f2;
+  background-position: left center;
+  background-repeat: no-repeat;
+}
+
+.header-contacts__phone {
+  padding-left: 16px;
+  background-image: url("http://u0618804.plsk.regruhosting.ru/img/icons/mobile.svg");
+  background-size: 9px 13px;
+}
+
+@media screen and (max-width: 768px) {
+  .header-contacts__phone {
+    margin-right: 4%;
+  }
+}
+
+@media screen and (max-width: 740px) {
+  .header-contacts__phone {
+    padding-left: 30px;
+    background-size: auto 22px;
+  }
+}
+
+.header-contacts__mail {
+  padding-left: 20px;
+  background-image: url("http://u0618804.plsk.regruhosting.ru/img/icons/mail.svg");
+  background-size: 14px auto;
+}
+
+@media screen and (max-width: 740px) {
+  .header-contacts__phone , .header-contacts__mail {
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+    font-size: 23px;
+  }
+}
+
+@media screen and (max-width: 740px) {
+  .header-contacts__mail {
+    padding-left: 40px;
+    background-size: 24px auto;
+  }
+}
+
+.header-contacts__button {
+  padding-left: 30px;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: "Raleway-Medium";
+  font-style: normal;
+  color: #3ea3f2;
+  background-color: transparent;
+  background-image: url("http://u0618804.plsk.regruhosting.ru/img/icons/phone.svg");
+  background-size: 20px auto;
+  background-position: left center;
+  background-repeat: no-repeat;
+  box-shadow: none;
+}
+
+@media screen and (max-width: 768px) {
+  .header-contacts__button {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 740px) {
+  .header-contacts__button {
+    margin-top: 10px;
+    font-size: 22px;
+  }
+}
+
+/*-----bottom-bar------*/
+
+.bottom-bar {
+  padding: 15px 0;
+  opacity: .9;
+  background-color: #f0f0f0;
+}
+
+.bottom-bar__logo , .bottom-bar__logo-mobile {
+  width: 13%;
+}
+
+@media screen and (max-width: 1200px) {
+  .bottom-bar__logo {
+    display: none;
+  }
+}
+
+.bottom-bar__logo-mobile {
+  display: none;
+}
+
+@media screen and (max-width: 1200px) {
+  .bottom-bar__logo-mobile {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .bottom-bar__logo-mobile {
+    width: 24%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .bottom-bar__logo-mobile {
+    width: 48%;
+  }
+}
+
+
+.bottom-bar__logo img , .bottom-bar__logo-mobile img {
+  width: 100%;
+}
+
+.header-menu {
+  display: table;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 78%;
+  background-color: transparent;
+}
+
+@media screen and (max-width: 1200px) {
+  .header-menu {
+    display: table;
+    visibility: hidden;
+    overflow-y: auto;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    min-height: 500px;
+    opacity: 0;
+    background-color: #211f2e;
+    transition: .3s;
+  }
+
+  .header-menu_open {
+    visibility: visible;
+    opacity: 1;
+    transition: .3s;
+  }
+}
+
+/*----Кнопка бургера-----*/
+
+.headerBurger {
+  display: none;
+}
+
+@media screen and (max-width: 1200px) {
+  .headerBurger {
+    display: block;
+  }
+}
+
+/*---Элементы бургера---*/
+
+.headerBurger span {
+  display: block;
+  width: 40px;
+  height: 3px;
+  background-color: #3e3f43;
+}
+
+.headerBurger span:nth-child(2) {
+  margin: 7px 0;
+}
+
+/*----Кнопка закрытия бургера-----*/
+
+.headerNavClose {
+  display: none;
+  position: relative;
+}
+
+.headerNavClose span {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 32px;
+  height: 3px;
+  background-color: #fff;
+}
+
+@media screen and (max-width: 1200px) {
+  .headerNavClose {
+    display: block;
+    position: absolute;
+    top: 35px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .headerNavClose span:first-child {
+    transform: rotate(45deg);
+  }
+
+  .headerNavClose span:last-child {
+    transform: rotate(-45deg);
+  }
+} 
+
+.header-menu__list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 1200px) {
+  .header-menu__list {
+    display: table-cell;
+    width: 100%;
+    vertical-align: middle;
+  }
+}
+
+.header-menu__item {
+  max-width: 150px;
+}
+
+@media screen and (max-width: 1200px) {
+  .header-menu__item {
+    display: block;
+    width: 100%;
+    max-width: none;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+}
+
+.bottom-bar__link {
+  font-size: 18px;
+  font-family: "Raleway-Regular";
+  line-height: 21px;
+  color: #3e3f43;
+}
+
+@media screen and (max-width: 1366px) {
+  .bottom-bar__link {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .bottom-bar__link {
+    z-index: 9999;
+    margin: 0;
+    margin-bottom: 30px;
+    font-size: 20px;
+    font-family: "Montserrat-Medium";
+    color: #fff;
+  }
+}
+
+.header-menu__button {
+  width: 25.74px;
+  height: 26.34px;
+  background-color: transparent;
+  background-image: url("http://u0618804.plsk.regruhosting.ru/img/icons/search_button.png");
+  background-size: cover;
+}

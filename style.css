@@ -1,0 +1,602 @@
+@font-face {
+  font-family: "Montserrat-Light";
+
+  src: url("http://u0618804.plsk.regruhosting.ru/fonts/Montserrat-Light.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Montserrat-Medium";
+
+  src: url("http://u0618804.plsk.regruhosting.ru/fonts/Montserrat-Medium.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Montserrat-Regular";
+
+  src: url("http://u0618804.plsk.regruhosting.ru/fonts/Montserrat-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Raleway-Bold";
+
+  src: url("http://u0618804.plsk.regruhosting.ru/fonts/Raleway-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Raleway-Medium";
+
+  src: url("http://u0618804.plsk.regruhosting.ru/fonts/Raleway-Medium.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Raleway-Regular";
+
+  src: url("http://u0618804.plsk.regruhosting.ru/fonts/Raleway-Regular.woff") format("woff");
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-weight: normal;
+  font-family: "Raleway-Regular";
+  font-style: normal;
+  line-height: 19px;
+  color: #68696c;
+  background-color: #f8f8f8;
+}
+
+* , *::before , *::after {
+  box-sizing: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+button {
+  border: none;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: "Raleway-Regular";
+  color: #fff;
+  background-color: transparent;
+  background-color: #3ea3f2;
+  box-shadow: 0 20px 20px -10px rgba(62, 163, 242, .46);
+  cursor: pointer;
+}
+
+@media screen and (max-width: 992px) {
+  button {
+    font-size: 20px;
+  }
+}
+
+.list-reset , p {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+
+/*Контейнер-центровщик*/
+
+.fixed-container {
+  overflow: hidden;
+  overflow-y: hidden;
+  width: 1400px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 1600px) {
+  .fixed-container {
+    width: 83%;
+  }
+}
+
+@media screen and (max-width: 1366px) {
+  .fixed-container {
+    width: 90%;
+  }
+}
+
+p , h1 , h2 , h3 {
+  color: #3e3f43;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  font-weight: normal;
+  font-family: "Raleway-Regular";
+  font-style: normal;
+  line-height: 27px;
+}
+
+@media screen and (max-width: 992px) {
+  p {
+    font-size: 18px;
+  }
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 58px;
+  font-weight: 500;
+  font-family: "Montserrat-Medium";
+  font-style: normal;
+  line-height: 58px;
+}
+
+@media screen and (max-width: 992px) {
+  h1 {
+    font-size: 30px;
+    line-height: 20px;
+  }
+}
+
+h2 {
+  margin: 0;
+  padding: 0;
+  font-size: 36px;
+  font-weight: 500;
+  font-family: "Montserrat-Medium";
+  font-style: normal;
+  line-height: 36px;
+}
+
+@media screen and (max-width: 992px) {
+  h2 {
+    font-size: 28px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  h2 {
+    font-size: 24px;
+  }
+}
+
+h3 {
+  margin: 0;
+  padding: 0;
+  font-size: 22px;
+  font-weight: 500;
+  font-family: "Montserrat-Medium";
+  font-style: normal;
+  line-height: 27px;
+}
+
+@media screen and (max-width: 992px) {
+  h3 {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+
+h4 {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-weight: normal;
+  font-family: "Montserrat-Medium";
+  line-height: 20px;
+  color: #3ea3f2;
+}
+
+.flex {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.flex-center-between {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flex-start-between {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.flex-left-bottom {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+
+.flex-left-center {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.flex-top-right {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+
+.list-flex {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  width: 100%;
+}
+
+
+/*Созданный мной шаблон для элемента, который должен быть в макете по
+правилам верстки (например в article обязательно должен быть заголовок), но
+по дизайну его быть не должно. В отличие от display:none, это свойство
+не вырезает элемент из кода и не скрывает от поисковых систем и 
+экранных дикторов, но делает не видимым в дизайне.*/
+
+.visually-hidden {
+  overflow: hidden;
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+
+/*--------Popups----------*/
+
+#FormPopupConnect , #PopupCall , #Popup-sales {
+  width: 40%;
+  margin: 20vh auto 80px auto;
+  padding: 80px 50px 40px 50px;
+  text-align: center;
+  background-color: #fff;
+}
+
+#Popup-sales {
+  width: 30%;
+}
+
+@media screen and (max-width: 1440px) {
+  #FormPopupConnect , #PopupCall , #Popup-sales , #Popup-sales {
+    margin: 10vh auto 20px auto;
+    padding: 80px 50px 40px 50px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  #FormPopupConnect , #Popup-sales , #Popup-sales {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  #PopupCall {
+    width: 60%;
+    margin: 110px auto 0 auto;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #FormPopupConnect , #Popup-sales , #Popup-sales {
+    width: 86%;
+    margin: 60px auto 0 auto;
+    padding: 30px 15px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #PopupCall {
+    width: 86%;
+  }
+}
+
+.ContactFormHeading {
+  margin-bottom: 17px;
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 30px;
+}
+
+@media screen and (max-width: 600px) {
+  .ContactFormHeading {
+    margin-bottom: 14px;
+    font-size: 20px;
+  }
+}
+
+.sales-popup {
+  max-width: 40%;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 1440px) {
+  .sales-popup {
+    max-width: none;
+  }
+}
+
+.Popup-sales__contain {
+  width: 80%;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 1440px) {
+  .Popup-sales__contain {
+    width: 100%;
+  }
+}
+
+.Popup-sales__button1 , .Popup-sales__button2 {
+  margin-top: 80px;
+  padding: 15px 50px;
+}
+
+@media screen and (max-width: 450px) {
+  .Popup-sales__button {
+    margin: 40px auto 0 auto;
+    padding: 15px 50px;
+  }
+}
+
+.ContactFormHeading2 {
+  margin-bottom: 34px;
+  font-size: 18px;
+  font-family: "Montserrat-Light";
+  line-height: 22px;
+}
+
+@media screen and (max-width: 600px) {
+  .ContactFormHeading2 {
+    margin-bottom: 24px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+#nameFull , #phoneNumber , #emailAddress {
+  width: 90%;
+  height: 58px;
+  margin-bottom: 14px;
+  padding-left: 20px;
+  border: 1px solid #e9e9e9;
+  font-size: 16px;
+  font-family: "Montserrat-Light";
+  color: #aeaeae;
+  background-color: #f8f8f8;
+  border-radius: 5px;
+}
+
+#nameFull , #phoneNumber , #emailAddress {
+  outline: none;
+}
+
+@media screen and (max-width: 1440px) {
+  #nameFull , #phoneNumber , #emailAddress {
+    height: 40px;
+    margin-bottom: 14px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #nameFull , #phoneNumber , #emailAddress {
+    margin-bottom: 12px;
+    padding-left: 10px;
+    font-size: 14px;
+  }
+}
+
+.buttonSend , .button-ok {
+  margin-top: 45px;
+  padding: 15px 50px;
+}
+
+@media screen and (max-width: 1400px) {
+  .buttonSend , .button-ok {
+    margin-top: 10px;
+  }
+}
+
+.ContactFormPopup , .FormPopup-call , .FormPopup-sales {
+  display: table;
+  visibility: hidden;
+  overflow-y: auto;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  min-height: 200px;
+  padding-right: 0;
+  padding-left: 0;
+  opacity: 0;
+  background-color: #211f2e;
+  transition: visibility:.6s, opacity:.6s;
+}
+
+.ContactFormPopup_open , .FormPopup-call_open , .FormPopup-sales_open {
+  visibility: visible;
+  opacity: .97;
+  transition: visibility:.5s, opacity:.5s;
+}
+
+.ContactFormClose {
+  display: block;
+  position: absolute;
+  top: 16vh;
+  right: 26vw;
+  width: 40px;
+  height: 40px;
+}
+
+@media screen and (max-width: 1440px) {
+  .ContactFormClose {
+    top: 10vh;
+    right: 22vw;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .ContactFormClose {
+    right: 15%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .ContactFormClose {
+    top: 35px;
+    right: 5%;
+  }
+}
+
+.ContactFormClose span {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 32px;
+  height: 2px;
+  background-color: #fff;
+}
+
+.ContactFormClose span:first-child {
+  transform: rotate(45deg);
+}
+
+.ContactFormClose span:last-child {
+  transform: rotate(-45deg);
+} 
+
+
+/* Стили для попапа при закрытии сайта */
+
+.popup-exit {
+  width: 100%;
+  margin: 0 auto;
+  padding: 80px 50px;
+  text-align: center;
+  background-color: #fff;
+}
+
+.exitblock {
+  display: none;
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+} 
+
+.exitblock .fon {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  opacity: .8;
+  background: #f6fcff;
+}
+
+.exitblock .modaltext {
+  box-sizing: border-box;
+  position: fixed;
+  top: 80px;
+  left: 50%;
+  width: 40%;
+  box-shadow: 0 15px 15px -10px rgba(0,0,0,.45);
+  transform: translateX(-50%);
+}
+
+@media screen and (max-width: 992px) {
+  .exitblock .modaltext {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .exitblock .modaltext {
+    width: 83%;
+  }
+}
+
+.closeblock {
+  position: fixed;
+  top: 20px;
+  right: 30px;
+  text-align: center;
+  font-size: 82px;
+  line-height: 60px;
+  color: #3ea3f2;
+  transform: rotate(45deg);
+  cursor: pointer;
+}
+
+.closeblock:hover {
+  color: #3e3f43;
+}
+
+.note , .note-call {
+  position: relative;
+  right: 0;
+  left: 0;
+  width: 100%;
+
+  object-fit: cover;
+}
+
+.ok-form , .ok-form-call {
+  position: absolute;
+  right: auto;
+  bottom: 10%;
+  left: 50%;
+  width: 50%;
+  margin: 0 auto;
+  padding: 78px 60px 60px 60px;
+  border: none;
+  text-align: center;
+  opacity: .97;
+  color: #323554;
+  background-color: #fff;
+  transform: translateX(-50%);
+  transition: .5s;
+}
+
+@media screen and (max-width: 992px) {
+  .ok-form , .ok-form-call {
+    bottom: 2%;
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .ok-form , .ok-form-call {
+    width: 80%;
+  }
+}
+
